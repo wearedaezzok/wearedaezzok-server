@@ -31,6 +31,12 @@ dependencies {
 
     // H2 Database
     runtimeOnly("com.h2database:h2")
+
+    // kotest
+    val kotestVersion = "5.8.0"
+    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+
 }
 
 tasks.withType<KotlinCompile> {
