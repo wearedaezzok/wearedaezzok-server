@@ -36,7 +36,6 @@ dependencies {
 
     // database
     runtimeOnly("com.h2database:h2")
-    runtimeOnly("mysql:mysql-connector-java")
 
     // kotest
     val kotestVersion = "5.8.0"
