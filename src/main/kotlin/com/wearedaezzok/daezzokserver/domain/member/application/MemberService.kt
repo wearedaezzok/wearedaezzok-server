@@ -7,18 +7,18 @@ import com.wearedaezzok.daezzokserver.domain.member.domain.MemberJpaRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
-
 @Service
 @Transactional
 class MemberService(
-    private val memberJpaRepository: MemberJpaRepository
+    private val memberJpaRepository: MemberJpaRepository,
 ) {
-    fun createMembers(request: List<MemberCreateRequest>) : List<MemberCreateResponse>{
-        val response = request.stream()
-            .map {
-                val member =  memberJpaRepository.save(Member(name = it.name))
-                MemberCreateResponse.of(member)
-            }.toList()
+    fun createMembers(request: List<MemberCreateRequest>): List<MemberCreateResponse> {
+        val response =
+            request.stream()
+                .map {
+                    val member = memberJpaRepository.save(Member(name = it.name))
+                    MemberCreateResponse.of(member)
+                }.toList()
         return response
     }
 }

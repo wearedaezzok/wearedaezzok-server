@@ -6,13 +6,10 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
-
 @Entity
 class Question(
-    @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
-
     @Column(nullable = false, columnDefinition = "TEXT")
-    val content: String
-) {
-}
+    val content: String,
+)

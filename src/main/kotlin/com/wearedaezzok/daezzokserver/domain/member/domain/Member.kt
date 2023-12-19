@@ -5,12 +5,10 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
-
 @Entity
 class Member(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
     var name: String,
-    var point: Int = 0
-) {
-}
+    var point: Int = 0,
+)
