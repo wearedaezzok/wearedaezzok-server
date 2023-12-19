@@ -31,8 +31,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     // security
-    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.security:spring-security-test")
+     // implementation("org.springframework.boot:spring-boot-starter-security")
+    // implementation("org.springframework.security:spring-security-test")
 
     // database
     runtimeOnly("com.h2database:h2")
