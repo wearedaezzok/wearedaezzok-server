@@ -5,6 +5,7 @@ import com.wearedaezzok.daezzokserver.domain.member.application.dto.MemberCreate
 import com.wearedaezzok.daezzokserver.domain.member.application.dto.MemberCreateResponse
 import com.wearedaezzok.daezzokserver.global.common.response.SuccessMessage
 import com.wearedaezzok.daezzokserver.global.common.response.SuccessResponse
+import io.swagger.v3.oas.annotations.Operation
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.web.bind.annotation.PostMapping
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController
 class MemberController(
     private val memberService: MemberService,
 ) {
+
+    @Operation(description = "사용자 생성 API")
     @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE])
     @ResponseStatus(HttpStatus.OK)
     fun createMembers(
