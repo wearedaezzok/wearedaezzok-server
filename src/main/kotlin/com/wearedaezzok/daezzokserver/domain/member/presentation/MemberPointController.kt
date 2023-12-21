@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/members/point")
+@RequestMapping("/api/v1/members/point")
 class MemberPointController(
     private val memberPointService: MemberPointService,
 ) {
