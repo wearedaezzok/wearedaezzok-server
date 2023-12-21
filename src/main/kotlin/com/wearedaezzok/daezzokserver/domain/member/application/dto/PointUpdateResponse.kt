@@ -7,13 +7,12 @@ class PointUpdateResponse(
     val name: String,
     val point: Int,
 ) {
-
     companion object {
-        fun of(member: Member) : PointUpdateResponse {
+        fun of(member: Member): PointUpdateResponse {
             return PointUpdateResponse(
                 id = member.id,
                 name = member.name,
-                point = member.point
+                point = member.point,
             )
         }
     }

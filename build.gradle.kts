@@ -40,7 +40,6 @@ dependencies {
     // swagger
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 
-
     // kotest
     val kotestVersion = "5.8.0"
     testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
